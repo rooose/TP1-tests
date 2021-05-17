@@ -42,4 +42,4 @@ Pour la première réponse par exemple, la réponse attendue est `32`, mais le p
 
 ## ⚠ Note importante ⚠
 
-Ce n'est pas parce que vos tests passent que vous allez avoir 100%. Comme mentionné en classe, la qualité du code est également un critère très important!! Il est important de bien vérifier vos fonctions et de vous assurer que tout fonctionne bien. Cependant, si tous les tests passent, c'est un bon indicateur que votre logique fonctionne!
+Ce n'est pas parce que vos tests passent que vous allez avoir 100%. Comme mentionné en classe, la qualité du code est également un critère très important !! Il est important de bien vérifier vos fonctions et de vous assurer que tout fonctionne bien. Cependant, si tous les tests passent, c'est un bon indicateur que votre logique fonctionne!

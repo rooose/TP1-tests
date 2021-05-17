@@ -1,17 +1,18 @@
 # Qualité de code - erreurs courantes
 
-Voici un petit résumé des erreurs les plus courantes dans les labs :)
+Voici un petit résumé des erreurs les plus courantes dans les labos :)
 
 ## LECTURE
 
-Lisez bien l'énoncé avant de commencer le TP! Beaucoup des erreurs peuvent être facilement évitées, c'est souvent
-des erreurs d'inattention ou des manquements qui étaient spécifiés dans l'énoncé ou dans le TODO.
+Lisez bien l'énoncé avant de commencer le TP! Beaucoup des erreurs peuvent être facilement évitées, ce sont souvent des erreurs d'inattention ou des manquements qui étaient spécifiés dans l'énoncé ou dans le TODO.
 
 ## VARIABLES BOOLÉENNES
 
-Il est facile de faire des erreurs avec les variables booléenes sans s'en rendre compte.
+Il est facile de faire des erreurs avec les variables booléennes sans s'en rendre compte.
 
 ```Python
+condition = a < 10
+
 # Mauvais exemple #1
 if condition == True:
     faireQqch()
@@ -36,29 +37,28 @@ else:
 Ce sont des erreurs de redondance : on peut directement le simplifier à:
 
 ```Python
-# condition est deja un booleen, c'est comme si on disait if False == True ou if True == True,
+condition = a < 10
+# condition est déjà un booléen, c'est comme si on disait if False == True ou if True == True,
 # on fait juste se répéter!
 if condition:
     faireQqch()
 
 # On peut directement assigner une valeur d'une équation booléenne à sa valeur, pas besoin de passer par un if :)
-condition == a >= b
+condition = a >= b
 
-# Si on fait un if ou un else avec un pass, c'est qu'on en a pas besoin :) Il y a souvent une manière d'inverser
+# Si on fait un if ou un else avec un pass, c'est qu’on n’en a pas besoin :) Il y a souvent une manière d'inverser
 # la condition pour juste utiliser ce dont on a besoin
 if not condition:
     faireQqch()
 
-# Même chose pour le else! Si on utilise un pass dans notre else, c'est qu'on en a pas vraiment besoin :)
+# Même chose pour le else! Si on utilise un pass dans notre else, c'est qu’on n’en a pas vraiment besoin :)
 if condition:
     faireQqch()
 ```
 
 ## CHIFFRES MAGIQUES
 
-Pour les chiffres magiques, voici une règle du pouce: Si en relisant votre code vous n'avez pas à penser deux fois
-à pourquoi vous directement hardcodé telle ou telle valeur, ce n'est pas un chiffre magique. Par exemple, si on veut
-faire une fonction pour diviser un chiffre en 2, on n'a pas nécessairement besoin d'une constante:
+Pour les chiffres magiques, voici une règle du pouce: Si en relisant votre code vous n'avez pas à penser deux fois à pourquoi vous directement hardcodé telle ou telle valeur, ce n'est pas un chiffre magique. Par exemple, si on veut faire une fonction pour diviser un chiffre en 2, on n'a pas nécessairement besoin d'une constante:
 
 ```Python
 # Pas besoin
@@ -71,7 +71,7 @@ def diviserParDeux(nombre):
     return nombre / 2
 ```
 
-Par contre, pour les trucs plus complexes (qui ont nécessités des calculs par exemple ou qui ont une signification
+En revanche, pour les trucs plus complexes (qui ont nécessités des calculs par exemple ou qui ont une signification
 particulière), on veut une constante pour savoir ce que ça représente. Par exemple:
 
 ```Python
@@ -85,16 +85,14 @@ def validerPassword(password):
     return password < TAILLE_PASSWORD_MAX
 ```
 
-Comme ça, quand on lit mon code, on comprend tout de suite! Et si on veut changer la taille max de password,
-on n'a qu'à la changer à une seule place :)
+Comme ça, quand on lit mon code, on comprend tout de suite! Et si on veut changer la taille max de password, on n'a qu'à la changer à une seule place :)
 
 ## NOMS DE VARIABLES
 
-Pour les noms de variables, je vois parfois des trucs comme: l, f, m, n, etc. Pour vous qui avez regardé votre code
-pendant quelques heures, c'est super clair! Pour moi qui corrige, c'est un peu mélangeant ;)
+Pour les noms de variables, je vois parfois des trucs comme: l, f, m, n, etc. Pour vous qui avez regardé votre code pendant quelques heures, c'est super clair! Pour moi qui corrige, c'est un peu mélangeant ;)
 
 ```Python
-# Pas clair, êtes vous capables de dire ce que ce code fait au premier coup d'oeil?
+# Pas clair, êtes-vous capables de dire ce que ce code fait au premier coup d'œil?
 def lireFichier():
     c = "./"
     n = "listeDeNombres.txt"
@@ -113,7 +111,7 @@ def lireFichier():
     return x
 
 
-# Beaucoup plus facile à lire!!
+# Beaucoup plus facile à lire !!
 def lireFichier():
     chemin = "./"
     nom = "listeDeNombres.txt"
@@ -132,8 +130,7 @@ def lireFichier():
     return contenu
 ```
 
-Comme vous pouvez voir, il y a encore des variables nommées f (standard pour file) et n (en general c'est accepté
-d'utiliser des variables à une lettre dans un for), mais le code est beaucoup plus clair!
+Comme vous pouvez voir, il y a encore des variables nommées f (standard pour file) et n (en général c'est accepté d'utiliser des variables à une lettre dans un for), mais le code est beaucoup plus clair!
 
 ## LISIBILITÉ
 
@@ -215,7 +212,4 @@ def aTrouveNombreCible(nombreCible, nombreDevine):
 
 ## POUR RÉSUMER
 
-Les erreurs qu'on fait ressortir ne sont vraiment pas graves, mais c'est vraiment important de prioriser la qualité
-du code, parce qu'en bout de ligne (surtout en entreprise), il y a souvent quelqu'un qui va réviser votre code,
-qui va travailler dessus avec vous ou même qui va hériter de votre projet. En insistant sur la qualité autant que sur
-la performance, on s'assure que vous écrivez du code qui est facilement lisible par n'importe qui :)
+Les erreurs qu'on fait ressortir ne sont vraiment pas graves, mais c'est vraiment important de prioriser la qualité du code, parce qu'en bout de ligne (surtout en entreprise), il y a souvent quelqu'un qui va réviser votre code, qui va travailler dessus avec vous ou même qui va hériter de votre projet. En insistant sur la qualité autant que sur la performance, on s'assure que vous écrivez du code qui est facilement lisible par n'importe qui :)
