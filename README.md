@@ -8,7 +8,7 @@ Voici un petit script qui vous permettra de tester vos fonctions de calculatrice
 
 - `testCalculatrice.py`: Script qui roule vos fonctions et qui compare les réponses avec celles du corrigé
 
-- `qualiteDuCode/guidelines.md`: Un fichier qui résume les erreurs courantes de qualité du code! Super important, vous êtes notés là-dessus!
+- `qualiteDuCode/README.md`: Un [fichier](qualiteDuCode/README.md) qui résume les erreurs courantes de qualité du code! Super important, vous êtes notés là-dessus!
 
 ## Comment exécuter
 
